@@ -260,7 +260,7 @@ int uv_write(uv_write_t* req, uv_stream_t* handle,
 
     THIS PROGRAM DOES NOT ALWAYS WORK, NEED SOMETHING BETTER**
 
-为了更好地演示流stream，我们将会使用``uv_pipe_t``。它可以将文件转换为流stream的形态。接下来的这个是使用libuv实现的，一个简单的T型工具（如果不是很了解，请看[维基百科](https://en.wikipedia.org/wiki/Tee_(command))）。所有的操作都是异步的，这也正是事件驱动I/O的威力所在。两个输出操作不会相互阻塞，但是我们也必须要注意，确保一块缓冲区不会在还没有写入之前，就提前被回收了。  
+为了更好地演示流stream，我们将会使用``uv_pipe_t``。它可以将文件转换为流stream的形态。接下来的这个是使用libuv实现的，一个简单的T型工具（如果不是很了解，请看[维基百科](https://en.wikipedia.org/wiki/Tee_(command) )）。所有的操作都是异步的，这也正是事件驱动I/O的威力所在。两个输出操作不会相互阻塞，但是我们也必须要注意，确保一块缓冲区不会在还没有写入之前，就提前被回收了。  
 
 这个程序执行命令如下
   
